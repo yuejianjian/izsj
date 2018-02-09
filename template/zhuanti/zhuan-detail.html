@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+    <title>专题详情</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <script src="../../lib/jquery-3.2.1.js"></script>
+    <script src="../../js/index.js"></script>
+</head>
+<body>
+<div class="baocuo">
+    <div class="box-cuo">
+        <div class="xing-cuo">请填写你的称呼</div>
+        <div class="ok-cuo">好的</div>
+    </div>
+</div>
+<div class="head qi-head">
+    <a href="javascript:;" class="fanhui" onclick="javascript:history.back(-1);"></a>
+    <a href="../../index.html" class="home"></a>
+    <div class="title">专题详情</div>
+</div>
+<div class="zhuan-detail">
+    <img src="http://zsj.izsjia.com/upload/cmsactivity/detail_picture/201801/15162522395078.jpg" alt="">
+</div>
+<div class="main appoint">
+    <div class="info">
+        <ul>
+            <li>
+                <input type="text" name="name" placeholder="如何称呼您" maxlength="20" class="name">
+            </li>
+            <li>
+                <input type="tel" name="mobile" placeholder="您的电话号码" maxlength="11" class="tel" id="tel" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+            </li>
+            <li class="sub">
+                <button type="button" id="appoint">立即预约</button>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

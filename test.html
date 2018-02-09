@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo展示</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box; }
+
+        body, table, thead, tbody, tr, th, td, div, ul, ol, dl, dt, dd, li, dl, h1, h2, h3, h4, p {
+            margin: 0;
+            padding: 0;
+            line-height: 1em; }
+
+        ol, ul, li {
+            list-style: none; }
+
+        img, fieldset {
+            border: 0; }
+
+        input {
+            letter-spacing: 1px; }
+
+        button {
+            border: none; }
+
+        ins, a {
+            text-decoration: none;
+            cursor: pointer;
+            color: #666; }
+
+        i, em {
+            font-style: normal; }
+
+        h1, h2, h3, h4, h5, h6, dt {
+            font-size: 100%;
+            font-weight: 500; }
+        /*1111*/
+        .case-floor {
+            width: 100%;
+            /* height: 928px; */
+            background: #F9F9F9;
+        }
+        .floor {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .slow-emerge {
+            opacity: 0;
+            -webkit-transform: translate(0, 20%);
+            transform: translate(0, 20%);
+            transition: all .8s ease;
+            -o-transition: all .8s ease;
+            -webkit-transition: all .8s ease;
+            -moz-transition: all .8s ease;
+            -ms-transition: all .8s ease;
+        }
+        .ffL {
+            font-family: "Microsoft YaHei", 微软雅黑, PingFangSC-Light;
+        }
+        .case-floor .case-cell {
+            width: 1180px;
+            margin: 0 auto;
+        }
+        .flex-pack-justify {
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+        .flex {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+        .case-floor .case-cell .case-column {
+            width: 236px;
+            height: 421px;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+        .case-floor .case-cell .case-column img {
+            width: 236px;
+            height: 421px;
+            display: block;
+        }
+        img {
+            border: none;
+            border-style: none;
+        }
+        .case-floor .case-cell .case-column .mask {
+            position: absolute;
+            width: 236px;
+            height: 109px;
+            bottom: 0;
+           /*  opacity: 0.8; */
+            background: linear-gradient(-180deg, rgba(0, 0, 0, 0.00) 0%, #000000 100%);
+            transition: all .4s ease;
+            -o-transition: all .4s ease;
+            -webkit-transition: all .4s ease;
+            -moz-transition: all .4s ease;
+            -ms-transition: all .4s ease;
+        }
+        .case-floor .case-cell .case-column .bg{
+            position: absolute;
+            width: 236px;
+            height: 421px;
+            top:421px;
+            transition: all .8s ease;
+            -o-transition: all .8s ease;
+            -webkit-transition: all .8s ease;
+            -moz-transition: all .8s ease;
+            -ms-transition: all .8s ease;
+        }
+        .case-floor .case-cell .case-column .case-info {
+            position: absolute;
+            width: 236px;
+            height: 277px;
+            top: 347px;
+            transition: all .8s ease;
+            -o-transition: all .8s ease;
+            -webkit-transition: all .8s ease;
+            -moz-transition: all .8s ease;
+            -ms-transition: all .8s ease;
+        }
+        .case-floor .case-cell .case-column:hover .bg{
+            background-color:#000;
+            opacity:0.6;
+            transition: all .8s ease;
+            top:0px;
+        }
+        .case-floor .case-cell .case-column:hover .case-info{
+            top:80px;
+            transition: all 1.5s ease;
+        }
+
+        .case-floor .case-cell .case-column .case-info .case-title {
+            width: 182px;
+            height: 24px;
+            margin: 0 auto;
+            overflow: hidden;
+            text-align: center;
+            font-size: 16px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 24px;
+        }
+        .ffM {
+            font-family: "Microsoft YaHei", 微软雅黑, PingFangSC-Medium;
+        }
+        .case-floor .case-cell .case-column .case-info .case-label {
+            margin: 10px auto 0;
+            width: 124px;
+            height: 15px;
+            opacity: 0.8;
+            font-size: 12px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 15px;
+            text-align: center;
+        }
+        .ffR {
+            font-family: "Microsoft YaHei", 微软雅黑, PingFangSC-Regular;
+        }
+        .case-floor .case-cell .case-column .case-info .case-des {
+            margin: 30px auto 0;
+            width: 182px;
+            height: 144px;
+            overflow: hidden;
+            font-size: 12px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 24px;
+            text-align: left;
+        }
+        .case-floor .case-cell .case-column .case-info .designer {
+            position: absolute;
+            bottom: 0;
+            left: 136px;
+        }
+        .flex-align-center {
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+        .case-floor .case-cell .case-column .case-info .designer .cover {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: block;
+        }
+        .case-floor .case-cell .case-column .case-info .designer .cover img {
+            width: 28px;
+            height: 28px;
+        }
+        .case-floor .case-cell .case-column .case-info .designer .name {
+            font-size: 12px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 15px;
+            margin-left: 8px;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<div class="floor case-floor ffL slow-emerge" style="padding: 50px 0px 65px; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+    <div class="case-cell flex flex-pack-justify">
+        <a href="#" class="case-column">
+            <img src="https://img1.mklimg.com/g1/M00/2B/8B/rBBrBVpdsyCATMWNAAXLMyhq5iA526.jpg!" alt="">
+            <div class="mask"></div>
+            <div class="bg"></div>
+            <div class="case-info">
+                <h3 class="case-title ffM" style="word-wrap: break-word;">上海南翔遇见幸福时光</h3>
+                <div class="case-label ffR">一房 / 美式</div>
+                <div class="case-des ffR is-truncated" style="word-wrap: break-word;">本案的客户是一对小年轻，此次装修作为婚房。喜欢美式风格，偏暖系。原始住宅是复式楼。共三层，男主人是健身教练，一二层是他的私人健身房，经常带私教课，三层是这次主要翻新的重点。下面，... </div>
+                <div class="designer flex flex-align-center">
+                    <div class="cover">
+                        <img src="http://img1.mklimg.com/g1/M00/18/44/rBBrBlmdKo2AHW-vAAByJF8NOhk801.jpg!" alt="">
+                    </div>
+                    <div class="name ffM">严鑫</div>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="case-column">
+            <img src="https://img2.mklimg.com/g1/M00/2B/8E/rBBrBlpdsyWAIJ8pAASXlJZP54Y571.jpg!" alt="">
+            <div class="mask"></div>
+            <div class="bg"></div>
+            <div class="case-info">
+                <h3 class="case-title ffM" style="word-wrap: break-word;">内有乾坤的白领公寓</h3>
+                <div class="case-label ffR">一房 / 简约</div>
+                <div class="case-des ffR is-truncated" style="word-wrap: break-word;">本案例为30平方，适合白领一族。搭建了半层，下面做了一个酒吧区，上面是睡觉的地方，做了楼梯上去，楼梯可以做展示和储物。沙发区坐在靠阳台的位置采光和通风都比较好。靠窗的位置还做了... </div>
+                <div class="designer flex flex-align-center">
+                    <div class="cover">
+                        <img src="http://img2.mklimg.com/g1/M00/18/3F/rBBrBVmdKOSAPSFNAADcnvEvugQ299.jpg!" alt="">
+                    </div>
+                    <div class="name ffM">张丽</div>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="case-column">
+            <img src="https://img2.mklimg.com/g1/M00/2B/8B/rBBrBVpdszCAVJj7AAR_jvmRDfY549.jpg!" alt="">
+            <div class="mask"></div>
+            <div class="bg"></div>
+            <div class="case-info">
+                <h3 class="case-title ffM" style="word-wrap: break-word;">城开珑庭 现代舒适三口... </h3>
+                <div class="case-label ffR">三房 / 简约</div>
+                <div class="case-des ffR is-truncated" style="word-wrap: break-word;">室内色彩通常由几种相近色或搭配颜色来进行装饰，但在这间公寓当中，色彩看来有很多。不同的纹理，装饰画以及色彩都冲击着视觉，但在这些混合当中，内饰并没有用过度。结合现代简约形式，... </div>
+                <div class="designer flex flex-align-center">
+                    <div class="cover">
+                        <img src="https://img3.mklimg.com/g2/M00/27/6A/rBBrClow6nWASa6tAAB9vcQQ-t4372.jpg!" alt="">
+                    </div>
+                    <div class="name ffM">何婧</div>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="case-column">
+            <img src="https://img3.mklimg.com/g2/M00/2B/80/rBBrCVpdszGAOxvWAAPpFmb0Mtc847.jpg!" alt="">
+            <div class="mask"></div>
+            <div class="bg"></div>
+            <div class="case-info">
+                <h3 class="case-title ffM" style="word-wrap: break-word;">北欧小确幸</h3>
+                <div class="case-label ffR">二房 / 简欧</div>
+                <div class="case-des ffR is-truncated" style="word-wrap: break-word;">年轻小夫妻，妻子怀孕4个月，整体黑白色为主，金色点缀，因为女主超级喜欢土豪金，要求简约而不简单，原先房屋结构比较归正，进门过道处比较浪费，同样考虑到女主怀孕，后期需要婴儿床的区域...  </div>
+                <div class="designer flex flex-align-center">
+                    <div class="cover">
+                        <img src="http://img1.mklimg.com/g1/M00/18/44/rBBrBlmdKo2AHW-vAAByJF8NOhk801.jpg!" alt="">
+                    </div>
+                    <div class="name ffM">严鑫</div>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="case-column">
+            <img src="https://img2.mklimg.com/g1/M00/2B/8E/rBBrBlpdszeAFle7AAOZXOn3d4w699.jpg!" alt="">
+            <div class="mask"></div>
+            <div class="bg"></div>
+            <div class="case-info">
+                <h3 class="case-title ffM" style="word-wrap: break-word;">“韵”唯有中国独有的词</h3>
+                <div class="case-label ffR">四房 / 新古典</div>
+                <div class="case-des ffR is-truncated" style="word-wrap: break-word;">本案以“韵”为题，在整体空间中和谐基调上彰显出浪漫的气质，软装与硬装上的中式元素的运用，成就了本案的精髓与灵魂，设计中不拘泥于单一的设计风格，力图在奢华优雅中呈现出中式的文化气息...  </div>
+                <div class="designer flex flex-align-center">
+                    <div class="cover">
+                        <img src="http://img2.mklimg.com/g1/M00/18/3F/rBBrBlmdI6KANHPbAABbSlXHESM632.jpg!" alt="">
+                    </div>
+                    <div class="name ffM">汪磊</div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

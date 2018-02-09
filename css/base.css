@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box; }
+
+body, table, thead, tbody, tr, th, td, div, ul, ol, dl, dt, dd, li, dl, h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+    line-height: 1em; }
+@font-face {
+    font-family: PingFang;
+    src:url(../font/PingFang.ttf);
+}
+ol, ul, li {
+    list-style: none; }
+
+img, fieldset {
+    border: 0; }
+
+input {
+    letter-spacing: 1px; }
+
+button {
+    border: none; }
+
+ins, a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #666; }
+
+i, em {
+    font-style: normal; }
+
+h1, h2, h3, h4, h5, h6, dt {
+    font-size: 100%;
+    font-weight: 500; }
+/*你、首页title*/
+html{
+    font-size: 4vw;
+    font-family: PingFang;
+}
+.head{
+    width: 100vw;
+    height: 3rem;
+    background-color:#fff;
+    z-index: 999;
+    /* padding: 11px 0;*/
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.detail-head{
+    width: 100vw;
+    height: 3rem;
+    z-index: 999;
+    /* padding: 11px 0;*/
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.head .home,.detail-head .home{
+    width: 1.5rem;
+    position: absolute;
+    left: 5%;
+    margin-top:0.766666rem;
+    background: url(../img/common/sprite.png) 0 3px/95px auto;
+}
+.head .fanhui,.detail-head .fanhui{
+    width: 1rem;
+    height:1.692rem;
+    position: absolute;
+    left: 5%;
+
+    margin-top:0.666667rem;
+    background: url(../img/common/fanhui.png) center no-repeat;
+    background-size: cover;
+}
+.qi-head .home,.detail-head .home{
+    left:18%;
+}
+.head .logo {
+    width: 85px;
+    background: url(../img/common/sprite.png) 0 -55px/100px auto;
+    margin-top:11.5px;
+}
+.head .title{
+    width: 10rem;
+    margin-top:0.766667rem;
+    font-size: 1.333333rem;
+    font-weight: 600;
+}
+.head .reservation {
+    position: absolute;
+    right: 5%;
+    top: 0.866667rem;
+    font-size: 1rem;
+    line-height: 1.466667rem;
+    color: #f08519;
+}
+.head a, .head div,.detail-head a {
+    display: inline-block;
+    height: 2rem;
+    vertical-align: bottom;
+}
+.bg-title{
+    background-color:#fff;
+}
+
